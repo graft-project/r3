@@ -11,6 +11,10 @@ include(CheckIncludeFile)
 include(CheckSymbolExists)
 include(CheckTypeSize)
 
+if(APPLE)
+  include_directories(SYSTEM /opt/local/include)
+  link_directories(/opt/local/lib)
+endif()
 
 cmake_minimum_required(VERSION 3.0)
 project(r3 VERSION 2.0.0)
