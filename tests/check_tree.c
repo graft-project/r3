@@ -646,7 +646,6 @@ START_TEST(test_route_cmp)
     m->request_method = METHOD_POST | METHOD_GET;
     fail_if( r3_route_cmp(r1, m) == -1, "should match");
 
-    r3_route_free(r1);
     match_entry_free(m);
     r3_tree_free(n);
 }

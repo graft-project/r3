@@ -13,20 +13,19 @@
 #include <pcre.h>
 
 #ifdef HAVE_STDBOOL_H
-
 #include <stdbool.h>
 
 #else
 
 #if !defined(bool) && !defined(__cplusplus)
 typedef unsigned char bool;
-#endif
 #ifndef false 
 #    define false 0
 #endif
 #ifndef true
 #    define true 1
 #endif
+#endif //#if !defined(bool) && !defined(__cplusplus)
 
 #endif
 
